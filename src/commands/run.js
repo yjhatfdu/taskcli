@@ -23,6 +23,7 @@ function connect(taskId) {
         }
       }
       if (msg.EType === "finish" || msg.EType === "error") {
+        console.log(m.utf8Data)
         process.exit(0)
       }
     })
