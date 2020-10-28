@@ -8,7 +8,9 @@ class UpdateCommand extends Command {
     const {flags} = this.parse(UpdateCommand)
     const filename = flags.filename
     let fcontent = fs.readFileSync(filename).toString()
-    const ctx = requireFromString(fcontent)
+    const ctx = requireFromString(fcontent, {
+      appendPaths: [path.resolve(__dirname,'./../../node_modules')],
+    })
     // console.log(fcontent)
     const data = ctx.build()
     axios({method: 'PUT', url: process.env['TASK_API'] + '/task/' + flags.taskid, data})

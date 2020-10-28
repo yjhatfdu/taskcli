@@ -2,13 +2,15 @@ const {Command, flags} = require('@oclif/command')
 const fs = require('fs')
 const requireFromString = require('require-from-string');
 const axios = require('axios')
-
+const path=require('path')
 class SubmitCommand extends Command {
   async run() {
     const {flags} = this.parse(SubmitCommand)
     const filename = flags.filename
     let fcontent = fs.readFileSync(filename).toString()
-    const ctx = requireFromString(fcontent)
+    const ctx = requireFromString(fcontent, {
+      appendPaths: [path.resolve(__dirname,'./../../node_modules')],
+    })
     // console.log(fcontent)
     const data = ctx.build()
     axios({method: 'POST', url: process.env['TASK_API'] + '/task', data})
@@ -19,7 +21,7 @@ class SubmitCommand extends Command {
           console.error(res.data)
         }
       }, err => {
-        console.error(err.response||err.toString());
+        console.error(err.response || err.toString());
       }).catch(err => console.log(err.toString()))
   }
 }
