@@ -19,7 +19,7 @@ $ npm install -g expr-taskcli
 $ taskcli COMMAND
 running command...
 $ taskcli (-v|--version|version)
-expr-taskcli/0.0.0 darwin-x64 node-v14.7.0
+expr-taskcli/0.1.0 darwin-x64 node-v14.7.0
 $ taskcli --help [COMMAND]
 USAGE
   $ taskcli COMMAND
@@ -68,7 +68,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.0.0/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.1.0/src/commands/run.js)_
 
 ## `taskcli stop`
 
@@ -86,7 +86,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.0.0/src/commands/stop.js)_
+_See code: [src/commands/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.1.0/src/commands/stop.js)_
 
 ## `taskcli submit`
 
@@ -97,14 +97,14 @@ USAGE
   $ taskcli submit
 
 OPTIONS
-  -f, --filename=filename  file to update
+  -f, --filename=filename  file to submit
 
 DESCRIPTION
   ...
   Extra documentation goes here
 ```
 
-_See code: [src/commands/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.0.0/src/commands/submit.js)_
+_See code: [src/commands/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.1.0/src/commands/submit.js)_
 
 ## `taskcli update`
 
@@ -123,5 +123,5 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.0.0/src/commands/update.js)_
+_See code: [src/commands/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.1.0/src/commands/update.js)_
 <!-- commandsstop -->
