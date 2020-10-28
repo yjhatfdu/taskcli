@@ -1,0 +1,51 @@
+{
+  "name": "expr-taskcli",
+  "version": "0.0.0",
+  "author": "yjhatfdu @yjhatfdu",
+  "bin": {
+    "taskcli": "./bin/run"
+  },
+  "bugs": "https://github.com/yjhatfdu/taskcli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "axios": "^0.21.0",
+    "expr_builder": "^1.0.0",
+    "require-from-string": "^2.0.2",
+    "websocket": "^1.0.32"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "globby": "^10.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/yjhatfdu/taskcli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "taskcli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "yjhatfdu/taskcli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
