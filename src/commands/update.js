@@ -16,7 +16,6 @@ class UpdateCommand extends Command {
     const data = ctx.build()
     axios({method: 'PUT', url: process.env['TASK_API'] + '/task/' + flags.taskid, data})
       .then(res => {
-        console.log(res);
         if (res.status === 200) {
           console.log(`taskId: ${res.data.Id} Version: ${res.data.Version}`)
         } else {
