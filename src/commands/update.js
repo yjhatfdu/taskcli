@@ -2,6 +2,7 @@ const {Command, flags} = require('@oclif/command')
 const fs = require('fs')
 const requireFromString = require('require-from-string');
 const axios = require('axios')
+const path = require('path')
 
 class UpdateCommand extends Command {
   async run() {

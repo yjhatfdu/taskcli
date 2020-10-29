@@ -45,7 +45,7 @@ class RunCommand extends Command {
           console.error(res.data.error)
         }
       }, err => {
-        console.error(err.response.data.error);
+        console.error(err.response.data);
       })
   }
 }
