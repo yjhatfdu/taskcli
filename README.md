@@ -4,9 +4,9 @@ taskcli
 
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/taskcli.svg)](https://npmjs.org/package/expr-taskcli)
-[![Downloads/week](https://img.shields.io/npm/dw/taskcli.svg)](https://npmjs.org/package/expr-taskcli)
-[![License](https://img.shields.io/npm/l/taskcli.svg)](https://github.com/yjhatfdu/taskcli/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/expr-taskcli.svg)](https://npmjs.org/package/expr-taskcli)
+[![Downloads/week](https://img.shields.io/npm/dw/expr-taskcli.svg)](https://npmjs.org/package/expr-taskcli)
+[![License](https://img.shields.io/npm/l/expr-taskcli.svg)](https://github.com/yjhatfdu/taskcli/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
