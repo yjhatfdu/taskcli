@@ -1,6 +1,6 @@
 {
   "name": "expr-taskcli",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "author": "yjhatfdu @yjhatfdu",
   "bin": {
     "taskcli": "./bin/run"
