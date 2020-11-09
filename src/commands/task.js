@@ -2,8 +2,6 @@ const {Command, flags} = require('@oclif/command')
 const Request = require('../request')
 const { Color,Foreground } = require('../color')
 const fs = require('fs')
-const path = require('path')
-const requireFromString = require('require-from-string')
 
 class TaskCommand extends Command {
   run(){
@@ -30,10 +28,8 @@ class TaskCommand extends Command {
     if (!flags.file) {
       return console.error("请指定task file")
     }
-    const fcontent = fs.readFileSync(flags.file).toString()
-    const ctx = requireFromString(fcontent, {
-      appendPaths: [path.resolve(__dirname, './../../node_modules')],
-    })
+
+    const ctx = require(flags.file)
     const data = ctx.build()
 
     Request('task','POST',data,(one) => {
@@ -63,10 +59,8 @@ class TaskCommand extends Command {
     if (!flags.file) {
       return console.error("请指定task file")
     }
-    const fcontent = fs.readFileSync(flags.file).toString()
-    const ctx = requireFromString(fcontent, {
-      appendPaths: [path.resolve(__dirname, './../../node_modules')],
-    })
+    
+    const ctx = require(flags.file)
     const data = ctx.build()
     
     Request('task/'+ flags.id,'PUT',data,(one) => {
