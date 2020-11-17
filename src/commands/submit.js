@@ -1,3 +1,5 @@
+const compileTs = require("../compile");
+
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs')
 const requireFromString = require('require-from-string');
@@ -9,10 +11,19 @@ class SubmitCommand extends Command {
     const {flags} = this.parse(SubmitCommand)
     const filename = flags.filename
     let fcontent = fs.readFileSync(filename).toString()
+    if (filename.endsWith(".ts")) {
+      const {code, errors} = compileTs(fcontent);
+      if (errors.length !== 0) {
+        console.error(errors.map(e => `${e.messageText}`).join('\n'))
+        process.exit();
+      }
+      fcontent = code[0].text
+    }
+    // console.log(fcontent);
     const ctx = requireFromString(fcontent, {
       appendPaths: [path.resolve(__dirname, './../../node_modules')],
     })
-    // console.log(fcontent)
+    // console.log(ctx)
     const data = ctx.build()
     axios({method: 'POST', url: process.env['TASK_API'] + '/task', data})
       .then(res => {
