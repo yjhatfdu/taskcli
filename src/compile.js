@@ -5,7 +5,6 @@ module.exports = function compileTs(code) {
   let outputs = [];
   let compilerHost = {
     getSourceFile: function (filename) {
-      // console.log(filename);
       if (filename === "task.ts")
         return ts.createSourceFile(filename, code+"declare const module: any;\ndeclare function require(s:string):any;\nif(!module.exports){module.exports=require('expr_builder').defaultContext};", "esnext");
       let p = path.join(__dirname, "../", filename);

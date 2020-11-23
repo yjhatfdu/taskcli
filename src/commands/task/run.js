@@ -1,5 +1,6 @@
 const {Command, flags} = require('@oclif/command')
-const axios = require('axios')
+const Request = require('../../utils/request')
+const { Color } = require('../../utils/color')
 
 function connect(taskId) {
   const ws = require("websocket");
@@ -31,33 +32,21 @@ function connect(taskId) {
   wsc.connect(`${process.env['TASK_API']}/task/${taskId}/events`)
 }
 
-class RunCommand extends Command {
-  async run() {
-    const {flags} = this.parse(RunCommand)
-    axios({method: 'POST', url: process.env['TASK_API'] + '/task/' + flags.taskid + '/run'})
-      .then(res => {
-        if (res.status === 204) {
-          console.log("started");
-          if (!flags.background) {
-            connect(flags.taskid)
-          }
-        } else {
-          console.error(res.data.error)
-        }
-      }, err => {
-        console.error(err.response.data);
-      })
+class TaskCommand extends Command {
+  run(){
+    const {flags} = this.parse(TaskCommand)
+    
+    Request('task/'+ flags.taskid + '/run','POST',null,(one) => {
+      console.log()
+      console.log(Color.Blue('Success'))
+      console.log()
+      connect(flags.taskid)
+    })
   }
 }
 
-RunCommand.description = `run task
-...
-Extra documentation goes here
-`
-
-RunCommand.flags = {
-  taskid: flags.integer({char: 't', description: 'task id to run'}),
-  background: flags.boolean({char: "d", description: 'run in background'})
+TaskCommand.flags = {
+  taskid: flags.integer({char: 't', description: 'task id', required: true}),
 }
 
-module.exports = RunCommand
+module.exports = TaskCommand
