@@ -1,4 +1,4 @@
-const {Command, flags} = require('@oclif/command')
+const {Command} = require('@oclif/command')
 const Request = require('../../utils/request')
 const { Color } = require('../../utils/color')
 const compileTs = require("../../compile");
@@ -7,9 +7,13 @@ const fs = require('fs')
 const path = require('path')
 
 class TaskCommand extends Command {
+  static args = [
+    {name: 'filename'},
+  ]
+
   run(){
-    const {flags} = this.parse(TaskCommand)
-    const filename = flags.filename
+    const {args} = this.parse(TaskCommand)
+    const filename = args.filename
 
     let fcontent = fs.readFileSync(filename).toString()
     if (filename.endsWith(".ts")) {
@@ -33,10 +37,6 @@ class TaskCommand extends Command {
       console.log()
     })
   }
-}
-
-TaskCommand.flags = {
-  filename: flags.string({char: 'f', description: 'file to submit', required: true}),
 }
 
 module.exports = TaskCommand

@@ -1,4 +1,4 @@
-const {Command, flags} = require('@oclif/command')
+const {Command} = require('@oclif/command')
 const Request = require('../../utils/request')
 const { Color } = require('../../utils/color')
 const compileTs = require("../../compile");
@@ -7,9 +7,14 @@ const fs = require('fs')
 const path = require('path')
 
 class TaskCommand extends Command {
+  static args = [
+    {name: 'taskid'},
+    {name: 'filename'},
+  ]
+
   run(){
-    const {flags} = this.parse(TaskCommand)
-    const filename = flags.filename
+    const {args} = this.parse(TaskCommand)
+    const filename = args.filename
 
     let fcontent = fs.readFileSync(filename).toString()
     if (filename.endsWith(".ts")) {
@@ -26,18 +31,13 @@ class TaskCommand extends Command {
     })
     const data = ctx.build()
 
-    Request('task/'+ flags.taskid,'PUT',data,(one) => {
+    Request('task/'+ args.taskid,'PUT',data,(one) => {
       const text = `ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)}`
       console.log()
       console.log(text)
       console.log()
     })
   }
-}
-
-TaskCommand.flags = {
-  filename: flags.string({char: 'f', description: 'file to submit', required: true}),
-  taskid: flags.integer({char: 't', description: 'task id to update', required: true}),
 }
 
 module.exports = TaskCommand

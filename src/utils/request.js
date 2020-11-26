@@ -20,7 +20,10 @@ const Request = (path,method,data,cb) => {
       if (res.statusCode!=200) {
         console.log("Code     => " + Color.Red(res.statusCode))
         console.log("Error    => " + Color.Red(data.Data.Main))
-        console.log("File     => " + Color.Blue(data.Data.File))
+        console.log("Stack    => " + Color.Blue(data.Data.Stack[0]))
+        for(var i=1; i< data.Data.Stack.length; i++) {
+          console.log("            " + Color.Blue(data.Data.Stack[i]))  
+        }
         console.log("Payload  => " + Color.Blue(data.Data.Payload))
         return
       }
