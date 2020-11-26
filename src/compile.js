@@ -6,7 +6,7 @@ module.exports = function compileTs(code) {
   let compilerHost = {
     getSourceFile: function (filename) {
       if (filename === "task.ts")
-        return ts.createSourceFile(filename, code+"declare const module: any;\ndeclare function require(s:string):any;\nif(!module.exports){module.exports=require('expr_builder').defaultContext};", "esnext");
+        return ts.createSourceFile(filename, code + "declare const module: any;\ndeclare function require(s:string):any;\nif(!module.exports){module.exports=require('expr_builder').defaultContext};", "esnext");
       let p = path.join(__dirname, "../", filename);
       if (fs.existsSync(p)) {
         return ts.createSourceFile(filename, fs.readFileSync(p).toString(), "esnext")
@@ -20,7 +20,7 @@ module.exports = function compileTs(code) {
       return "node_modules/typescript/lib/lib.d.ts";
     },
     fileExists: function (f) {
-      return  fs.existsSync(path.join(__dirname, "../", f));
+      return fs.existsSync(path.join(__dirname, "../", f));
     },
     useCaseSensitiveFileNames: function () {
       return false;
@@ -36,15 +36,25 @@ module.exports = function compileTs(code) {
     }
   };
   let p = ts.createProgram(["task.ts"], {
-    target:"esnext",
-    module:"commonjs"
+    target: "esnext",
+    module: "commonjs",
+    sourceMap: true,
   }, compilerHost);
   let emitResult = p.emit();
   let allDiagnostics = ts
     .getPreEmitDiagnostics(p)
-    .concat(emitResult.diagnostics)
+    .concat(emitResult.diagnostics);
+  let outputCode, sourcemap;
+  if (outputs[0].name.endsWith("map")) {
+    sourcemap = outputs[0].text;
+    outputCode = outputs[1].text
+  } else {
+    sourcemap = outputs[1].text;
+    outputCode = outputs[0].text
+  }
   return {
-    code: outputs,
+    code: outputCode,
+    sourcemap: sourcemap,
     errors: allDiagnostics
   }
-}
+};
