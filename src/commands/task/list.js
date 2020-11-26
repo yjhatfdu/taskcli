@@ -1,4 +1,4 @@
-const {Command, flags} = require('@oclif/command')
+const {Command} = require('@oclif/command')
 const Request = require('../../utils/request')
 const { Color } = require('../../utils/color')
 
@@ -14,7 +14,5 @@ class TaskCommand extends Command {
     })
   }
 }
-
-TaskCommand.flags = {}
 
 module.exports = TaskCommand
