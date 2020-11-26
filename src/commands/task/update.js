@@ -1,10 +1,8 @@
+require("source-map").SourceMapConsumer;
 const {Command} = require('@oclif/command');
 const Request = require('../../utils/request');
 const {Color} = require('../../utils/color');
-const compileTs = require("../../compile");
-const requireFromString = require('require-from-string');
-const fs = require('fs');
-const path = require('path');
+const load = require('../../load');
 
 class TaskCommand extends Command {
   static args = [
