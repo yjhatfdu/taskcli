@@ -19,7 +19,7 @@ $ npm install -g expr-taskcli
 $ taskcli COMMAND
 running command...
 $ taskcli (-v|--version|version)
-expr-taskcli/0.6.0 darwin-x64 node-v14.7.0
+expr-taskcli/0.6.1 darwin-x64 node-v14.7.0
 $ taskcli --help [COMMAND]
 USAGE
   $ taskcli COMMAND
@@ -64,7 +64,7 @@ OPTIONS
   -t, --taskid=taskid  (required) task id to delete
 ```
 
-_See code: [src/commands/task/delete.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/delete.js)_
+_See code: [src/commands/task/delete.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/delete.js)_
 
 ## `taskcli task:info`
 
@@ -76,7 +76,7 @@ OPTIONS
   -t, --taskid=taskid  (required) task id
 ```
 
-_See code: [src/commands/task/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/info.js)_
+_See code: [src/commands/task/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/info.js)_
 
 ## `taskcli task:list`
 
@@ -85,7 +85,7 @@ USAGE
   $ taskcli task:list
 ```
 
-_See code: [src/commands/task/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/list.js)_
+_See code: [src/commands/task/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/list.js)_
 
 ## `taskcli task:run`
 
@@ -97,7 +97,7 @@ OPTIONS
   -t, --taskid=taskid  (required) task id
 ```
 
-_See code: [src/commands/task/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/run.js)_
+_See code: [src/commands/task/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/run.js)_
 
 ## `taskcli task:stop`
 
@@ -109,7 +109,7 @@ OPTIONS
   -t, --taskid=taskid  (required) task id
 ```
 
-_See code: [src/commands/task/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/stop.js)_
+_See code: [src/commands/task/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/stop.js)_
 
 ## `taskcli task:submit`
 
@@ -121,7 +121,7 @@ OPTIONS
   -f, --filename=filename  (required) file to submit
 ```
 
-_See code: [src/commands/task/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/submit.js)_
+_See code: [src/commands/task/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/submit.js)_
 
 ## `taskcli task:update`
 
@@ -134,5 +134,5 @@ OPTIONS
   -t, --taskid=taskid      (required) task id to update
 ```
 
-_See code: [src/commands/task/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.0/src/commands/task/update.js)_
+_See code: [src/commands/task/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.1/src/commands/task/update.js)_
 <!-- commandsstop -->
