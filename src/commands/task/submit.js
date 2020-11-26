@@ -9,8 +9,8 @@ class TaskCommand extends Command {
     const {flags} = this.parse(TaskCommand);
     const filename = flags.filename;
     const data = await load(filename);
+    console.log(JSON.stringify(data,null,2));
     Request('task', 'POST', data, (one) => {
-      const text = `ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)}`;
       console.log();
       console.log(text);
       console.log()
