@@ -36,6 +36,7 @@ USAGE
 * [`taskcli task:stop [TASKID]`](#taskcli-taskstop-taskid)
 * [`taskcli task:submit [FILENAME]`](#taskcli-tasksubmit-filename)
 * [`taskcli task:update [TASKID] [FILENAME]`](#taskcli-taskupdate-taskid-filename)
+* [`taskcli env:info`](#taskcli-envinfo)
 
 ## `taskcli help [COMMAND]`
 
