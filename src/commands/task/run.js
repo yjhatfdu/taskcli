@@ -33,7 +33,7 @@ function connect(taskId) {
 
 class TaskCommand extends Command {
   static args = [
-    {name: 'taskid'},
+    {name: 'taskid', required: true},
   ]
 
   run(){

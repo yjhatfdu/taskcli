@@ -4,7 +4,7 @@ const { Color } = require('../../utils/color')
 
 class TaskCommand extends Command {
   static args = [
-    {name: 'taskid'},
+    {name: 'taskid', required: true},
   ]
 
   run(){

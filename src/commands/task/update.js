@@ -6,8 +6,8 @@ const load = require('../../load');
 
 class TaskCommand extends Command {
   static args = [
-    {name: 'taskid'},
-    {name: 'filename'},
+    {name: 'taskid', required: true},
+    {name: 'filename', required: true},
   ]
   
   async run() {
