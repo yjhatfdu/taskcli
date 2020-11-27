@@ -40,7 +40,7 @@
   "main": "src/index.js",
   "oclif": {
     "commands": "./src/commands",
-    "bin": "taskcli",
+    "bin": "etl",
     "plugins": [
       "@oclif/plugin-help"
     ]
