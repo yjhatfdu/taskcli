@@ -19,7 +19,7 @@ $ npm install -g expr-taskcli
 $ taskcli COMMAND
 running command...
 $ taskcli (-v|--version|version)
-expr-taskcli/0.6.5 darwin-x64 node-v14.7.0
+expr-taskcli/0.6.6 darwin-x64 node-v14.7.0
 $ taskcli --help [COMMAND]
 USAGE
   $ taskcli COMMAND
@@ -62,7 +62,7 @@ USAGE
   $ taskcli task:delete [TASKID]
 ```
 
-_See code: [src/commands/task/delete.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/delete.js)_
+_See code: [src/commands/task/delete.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/delete.js)_
 
 ## `taskcli task:info [TASKID]`
 
@@ -71,7 +71,7 @@ USAGE
   $ taskcli task:info [TASKID]
 ```
 
-_See code: [src/commands/task/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/info.js)_
+_See code: [src/commands/task/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/info.js)_
 
 ## `taskcli task:list`
 
@@ -80,7 +80,7 @@ USAGE
   $ taskcli task:list
 ```
 
-_See code: [src/commands/task/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/list.js)_
+_See code: [src/commands/task/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/list.js)_
 
 ## `taskcli task:run [TASKID]`
 
@@ -89,7 +89,7 @@ USAGE
   $ taskcli task:run [TASKID]
 ```
 
-_See code: [src/commands/task/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/run.js)_
+_See code: [src/commands/task/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/run.js)_
 
 ## `taskcli task:stop [TASKID]`
 
@@ -98,7 +98,7 @@ USAGE
   $ taskcli task:stop [TASKID]
 ```
 
-_See code: [src/commands/task/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/stop.js)_
+_See code: [src/commands/task/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/stop.js)_
 
 ## `taskcli task:submit [FILENAME]`
 
@@ -107,7 +107,7 @@ USAGE
   $ taskcli task:submit [FILENAME]
 ```
 
-_See code: [src/commands/task/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/submit.js)_
+_See code: [src/commands/task/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/submit.js)_
 
 ## `taskcli task:update [TASKID] [FILENAME]`
 
@@ -116,7 +116,7 @@ USAGE
   $ taskcli task:update [TASKID] [FILENAME]
 ```
 
-_See code: [src/commands/task/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/task/update.js)_
+_See code: [src/commands/task/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/task/update.js)_
 
 ## `taskcli env:info`
 
@@ -125,5 +125,5 @@ USAGE
   $ taskcli env:info
 ```
 
-_See code: [src/commands/env/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.5/src/commands/env/info.js)_
+_See code: [src/commands/env/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.6.6/src/commands/env/info.js)_
 <!-- commandsstop -->
