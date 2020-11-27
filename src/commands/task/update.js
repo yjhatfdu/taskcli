@@ -15,9 +15,8 @@ class TaskCommand extends Command {
     const filename = args.filename;
     const data = await load(filename);
     Request('task/' + args.taskid, 'PUT', data, (one) => {
-      const text = `ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)}`;
       console.log();
-      console.log(text);
+      console.log(`ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)}`);
       console.log()
     })
   }

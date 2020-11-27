@@ -13,10 +13,9 @@ class TaskCommand extends Command {
     const {args} = this.parse(TaskCommand);
     const filename = args.filename;
     const data = await load(filename);
-    console.log(JSON.stringify(data,null,2));
     Request('task', 'POST', data, (one) => {
       console.log();
-      console.log(text);
+      console.log(`ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)}`);
       console.log()
     })
   }
