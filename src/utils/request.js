@@ -31,7 +31,7 @@ const Request = (path,method,data,cb) => {
           }
           console.log("Payload  => " + Color.Blue(data.Data.Payload))
         }
-        return
+        process.exit(1)
       }
 
       cb(data.Data)
