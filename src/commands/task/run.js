@@ -37,6 +37,33 @@ function connect(taskId, cb) {
       }
     })
   });
+  wsc.on('httpResponse', (res,client) => {
+    var list = []
+    res.on('data',(t) => {
+      list.push(t)
+    })
+    res.on('end',() => {
+      const bfs = Buffer.concat(list).toString()
+      const data = JSON.parse(bfs)
+
+      if (res.statusCode!=200) {
+        console.log("Code     => " + Color.Red(res.statusCode))
+        console.log("Error    => " + Color.Red(data.Data.Main[0]))
+        for (var i = 1; i < data.Data.Main.length; i++) {
+          console.log("         => " + Color.Red(data.Data.Main[i]))
+        }
+
+        if (process.env['DEBUG']) {
+          console.log("Stack    => " + Color.Blue(data.Data.Stack[0]))
+          for(var i=1; i< data.Data.Stack.length; i++) {
+            console.log("            " + Color.Blue(data.Data.Stack[i]))
+          }
+          console.log("Payload  => " + Color.Blue(data.Data.Payload))
+        }
+        process.exit(1)
+      }
+    })
+  })
   wsc.connect(`${process.env['TASK_API']}/task/${taskId}/events`)
 }
 
