@@ -20,7 +20,7 @@ function connect(taskId, cb) {
           console.log()
           break
         case 'progress':
-          console.log(`taskId:${taskId}\ttime:${msg.Args.totalTime} s\ttotal:${msg.Args.total}\tspeed:${msg.Args.rps} rps`)
+          console.log(`taskId:${taskId}\ttime:${msg.Args.totalTime} s\ttotal:${msg.Args.total}\tspeed:${msg.Args.rps} rps\t${(msg.Args.total/msg.Args.length*100).toFixed(2)}%`)
           break
         case 'finish':
           console.log()
