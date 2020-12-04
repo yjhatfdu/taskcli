@@ -19,7 +19,7 @@ $ npm install -g expr-taskcli
 $ etl COMMAND
 running command...
 $ etl (-v|--version|version)
-expr-taskcli/0.7.0 darwin-x64 node-v14.15.0
+expr-taskcli/0.7.1 darwin-x64 node-v14.15.0
 $ etl --help [COMMAND]
 USAGE
   $ etl COMMAND
@@ -48,7 +48,7 @@ USAGE
   $ etl datasource:info ACTION NAME [SCHEMA] [TABLE]
 ```
 
-_See code: [src/commands/datasource/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/datasource/info.js)_
+_See code: [src/commands/datasource/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/datasource/info.js)_
 
 ## `etl datasource:list`
 
@@ -57,7 +57,7 @@ USAGE
   $ etl datasource:list
 ```
 
-_See code: [src/commands/datasource/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/datasource/list.js)_
+_See code: [src/commands/datasource/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/datasource/list.js)_
 
 ## `etl env:info`
 
@@ -66,7 +66,7 @@ USAGE
   $ etl env:info
 ```
 
-_See code: [src/commands/env/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/env/info.js)_
+_See code: [src/commands/env/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/env/info.js)_
 
 ## `etl function:list`
 
@@ -75,7 +75,7 @@ USAGE
   $ etl function:list
 ```
 
-_See code: [src/commands/function/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/function/list.js)_
+_See code: [src/commands/function/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/function/list.js)_
 
 ## `etl help [COMMAND]`
 
@@ -99,7 +99,7 @@ USAGE
   $ etl task:delete TASKID
 ```
 
-_See code: [src/commands/task/delete.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/delete.js)_
+_See code: [src/commands/task/delete.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/delete.js)_
 
 ## `etl task:info TASKID`
 
@@ -108,7 +108,7 @@ USAGE
   $ etl task:info TASKID
 ```
 
-_See code: [src/commands/task/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/info.js)_
+_See code: [src/commands/task/info.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/info.js)_
 
 ## `etl task:list`
 
@@ -117,7 +117,7 @@ USAGE
   $ etl task:list
 ```
 
-_See code: [src/commands/task/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/list.js)_
+_See code: [src/commands/task/list.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/list.js)_
 
 ## `etl task:run TASKID`
 
@@ -126,7 +126,7 @@ USAGE
   $ etl task:run TASKID
 ```
 
-_See code: [src/commands/task/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/run.js)_
+_See code: [src/commands/task/run.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/run.js)_
 
 ## `etl task:stop TASKID`
 
@@ -135,7 +135,7 @@ USAGE
   $ etl task:stop TASKID
 ```
 
-_See code: [src/commands/task/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/stop.js)_
+_See code: [src/commands/task/stop.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/stop.js)_
 
 ## `etl task:submit FILENAME`
 
@@ -144,7 +144,7 @@ USAGE
   $ etl task:submit FILENAME
 ```
 
-_See code: [src/commands/task/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/submit.js)_
+_See code: [src/commands/task/submit.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/submit.js)_
 
 ## `etl task:update TASKID FILENAME`
 
@@ -153,5 +153,5 @@ USAGE
   $ etl task:update TASKID FILENAME
 ```
 
-_See code: [src/commands/task/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.0/src/commands/task/update.js)_
+_See code: [src/commands/task/update.js](https://github.com/yjhatfdu/taskcli/blob/v0.7.1/src/commands/task/update.js)_
 <!-- commandsstop -->
