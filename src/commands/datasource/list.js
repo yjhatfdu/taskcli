@@ -7,7 +7,7 @@ class TaskCommand extends Command {
     Request('datasources','GET',null,(list) => {
       console.log()
       for (let i = 0; i< list.length; i ++) {
-        const text = `SourceType: => ${Color.Blue(list[i].SourceType)} | URL => ${Color.Green(list[i].URL)} | Name => ${Color.Brown(list[i].Name)}`
+        const text = `SourceType: => ${Color.Blue(list[i].SourceType)} | URL => ${Color.Green(`${list[i].SourceType}://${list[i].Username}:${list[i].Password}@${list[i].Host}/${list[i].DBName}`)} | Name => ${Color.Brown(list[i].Name)}`
         console.log(text)
         console.log()
       }
