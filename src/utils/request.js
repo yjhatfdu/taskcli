@@ -29,7 +29,6 @@ const Request = (path,method,data,cb) => {
           for(var i=1; i< data.Data.Stack.length; i++) {
             console.log("            " + Color.Blue(data.Data.Stack[i]))
           }
-          console.log("Payload  => " + Color.Blue(data.Data.Payload))
         }
         process.exit(1)
       }
