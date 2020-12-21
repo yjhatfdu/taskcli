@@ -7,7 +7,7 @@ class TaskCommand extends Command {
     Request('tasks','GET',null,(list) => {
       console.log()
       for (let i = 0; i< list.length; i ++) {
-        const text = `ID => ${Color.Blue(list[i].Id)} | Version => ${Color.Green(list[i].Version)} | Name => ${Color.Brown(list[i].Name)} State => ${list[i].State}`
+        const text = `ID => ${Color.Blue(list[i].ID)} | Version => ${Color.Green(list[i].Version)} | Name => ${Color.Brown(list[i].Name)} State => ${list[i].State}`
         console.log(text)
         console.log()
       }

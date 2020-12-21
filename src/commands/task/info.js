@@ -11,7 +11,7 @@ class TaskCommand extends Command {
     const {args} = this.parse(TaskCommand)
     
     Request('task/'+ args.taskid,'GET',null,(one) => {
-      const text = `ID => ${Color.Blue(one.Id)} | Version => ${Color.Green(one.Version)} | Name => ${Color.Brown(one.Name)} State => ${one.State} Err => ${Color.Red(one.Err)}`
+      const text = `ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)} | Name => ${Color.Brown(one.Name)} State => ${one.State} Err => ${Color.Red(one.Err)}`
       console.log()
       console.log(text)
       console.log()
