@@ -7,14 +7,13 @@ const load = require('../../load');
 class TaskCommand extends Command {
   static args = [
     {name: 'filename', required: true},
-    {name: 'groupid', required: true},
   ];
 
   async run() {
     const {args} = this.parse(TaskCommand);
     const filename = args.filename;
     const data = await load(filename);
-    data.GroupID = parseInt(args.groupid);
+
     Request('task', 'POST', data, (one) => {
       console.log();
       console.log(`ID => ${Color.Blue(one.ID)} | Version => ${Color.Green(one.Version)}`);
