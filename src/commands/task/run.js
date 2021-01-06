@@ -31,6 +31,11 @@ function connect(taskId, cb) {
           console.log(Color.Red(msg.Args.message))
           process.exit(0)
           break
+        case 'stop':
+          console.log()
+          console.log(Color.Blue("Stop"))
+          process.exit(0)
+          break
         default: {
           // console.log(m.utf8Data)
         }
