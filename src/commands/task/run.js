@@ -37,7 +37,7 @@ function connect(taskId, cb) {
           process.exit(0)
           break
         default: {
-          // console.log(m.utf8Data)
+          console.log(m.utf8Data)
         }
       }
     })
