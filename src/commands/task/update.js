@@ -14,7 +14,6 @@ class TaskCommand extends Command {
     const {args} = this.parse(TaskCommand);
     const filename = args.filename;
     const data = await load(filename);
-    console.log(JSON.stringify(data))
     
     Request('task/' + args.taskid, 'PUT', data, (one) => {
       console.log();
