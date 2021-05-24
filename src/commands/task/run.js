@@ -28,8 +28,9 @@ function connect(taskId, cb) {
           process.exit(0)
           break
         case 'error':
-          console.log(Color.Red(msg.Args.message))
-          process.exit(0)
+          console.log(Color.Red(msg.Args))
+          // console.log(Color.Red(msg.Args.message))
+          // process.exit(0)
           break
         case 'stop':
           console.log()
